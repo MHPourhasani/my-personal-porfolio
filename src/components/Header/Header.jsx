@@ -39,24 +39,36 @@ const Header = () => {
 			</section>
 
 			<section className='my-10 h-64 w-56 rounded-t-full rounded-b-md bg-gradient-to-t from-sky-400 to-transparent md:h-72 md:w-64'>
-				<img src={photoMe_min} alt='my-photo' className='-translate-y-20 md:-translate-y-24' />
+				<img
+					src={photoMe_min}
+					alt='my-photo'
+					className='-translate-y-20 md:-translate-y-24'
+				/>
 			</section>
 
 			<section className='absolute hidden text-sky-500 sm:bottom-20 sm:left-28 sm:block md:bottom-14 md:left-36 lg:left-72 xl:left-96'>
 				<nav>
 					<a
+						target='_blank'
+						rel='noreferrer'
 						href='www.linkedin.com/in/mohammad-hasan-pourhasani'
 						className='mx-1 hover:text-sky-400'>
 						<HiOutlineMail />
 					</a>
 
 					<a
+						target='_blank'
+						rel='noreferrer'
 						href='www.linkedin.com/in/mohammad-hasan-pourhasani'
 						className='mx-1 hover:text-sky-400'>
 						<SiLinkedin />
 					</a>
 
-					<a href='https://github.com/MHPourhasani' className='mt-1 hover:text-sky-400'>
+					<a
+						target='_blank'
+						rel='noreferrer'
+						href='https://github.com/MHPourhasani'
+						className='mt-1 hover:text-sky-400'>
 						<AiOutlineGithub />
 					</a>
 					<p className='mx-0.5 cursor-default px-1 py-1'>|</p>
