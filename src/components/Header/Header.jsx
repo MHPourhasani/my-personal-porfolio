@@ -7,78 +7,64 @@ import { BsWhatsapp } from 'react-icons/bs';
 import { AiOutlineGithub } from 'react-icons/ai';
 
 const Header = () => {
-    return (
-        <section className="w-full flex flex-col justify-center items-center">
-            {/* <Navigation className='z-10' /> */}
+	return (
+		<section className='flex w-full flex-col items-center justify-center'>
+			{/* <Navigation className='z-10' /> */}
 
-            <section className="flex flex-col justify-center items-cente mt-10 mb-1 sm:mb-5">
-                <section className="text-center w-full">
-                    <div className="font-bold md:mb-3">
-                        <p className="text-white text-sm my-1 sm:text-2xl">
-                            Hello I'm
-                        </p>
-                        <p className="text-white text-xl sm:text-3xl">
-                            Mohammad Hasan Pourhasani
-                        </p>
-                    </div>
-                    <p className="font-normal text-base text-gray-500 my-2 md:text-sm">
-                        Front-End Developer | React
-                    </p>
-                </section>
-            </section>
+			<section className='items-cente mt-10 mb-1 flex flex-col justify-center sm:mb-5'>
+				<section className='w-full text-center'>
+					<div className='font-bold md:mb-3'>
+						<p className='my-1 text-sm text-white sm:text-2xl'>Hello I'm</p>
+						<p className='text-xl text-white sm:text-3xl'>Mohammad Hasan Pourhasani</p>
+					</div>
+					<p className='my-2 text-base font-normal text-gray-500 md:text-sm'>
+						Front-End Developer | React
+					</p>
+				</section>
+			</section>
 
-            <section className="flex justify-center items-center text-center my-5 sm:my-5">
-                <a
-                    href="/../assets/files/CV.pdf"
-                    download
-                    className="w-28 h-10 mx-1 text-sm text-sky-400 border-2 border-gray-500 rounded-md flex justify-center items-center"
-                >
-                    Download CV
-                </a>
-                <a
-                    href="#contact-me"
-                    className="w-24 h-10 mx-1 text-sm bg-sky-400 border-2 border-sky-400 rounded-md flex justify-center items-center"
-                >
-                    Let's Talk
-                </a>
-            </section>
+			<section className='my-5 flex items-center justify-center text-center sm:my-5'>
+				<a
+					href='/../assets/files/CV.pdf'
+					download
+					className='mx-1 flex h-10 w-28 items-center justify-center rounded-md border-2 border-gray-500 text-sm text-sky-400'>
+					Download CV
+				</a>
+				<a
+					href='#contact-me'
+					className='mx-1 flex h-10 w-24 items-center justify-center rounded-md border-2 border-sky-400 bg-sky-400 text-sm'>
+					Let's Talk
+				</a>
+			</section>
 
-            <section className="w-56 h-64 my-10 bg-gradient-to-t from-sky-400 to-transparent rounded-t-full rounded-b-md md:w-64 md:h-72">
-                <img
-                    src={photoMe}
-                    alt="my-photo"
-                    className="-translate-y-24 "
-                />
-            </section>
+			<section className='my-10 h-64 w-56 rounded-t-full rounded-b-md bg-gradient-to-t from-sky-400 to-transparent md:h-72 md:w-64'>
+				<img src={photoMe} alt='my-photo' className='-translate-y-24 ' />
+			</section>
 
-            <section className="absolute bottom-10 left-60 after:content-none after:w-5 after:h-10 text-sky-500">
-                <nav>
-                    <a
-                        href="www.linkedin.com/in/mohammad-hasan-pourhasani"
-                        className="mx-1"
-                    >
-                        <HiOutlineMail />
-                    </a>
+			<section className='absolute hidden text-sky-500 sm:-bottom-16 sm:left-28 sm:block md:-bottom-24 md:left-36 lg:left-60'>
+				<nav>
+					<a
+						href='www.linkedin.com/in/mohammad-hasan-pourhasani'
+						className='mx-1 hover:text-sky-400'>
+						<HiOutlineMail />
+					</a>
 
-                    <a
-                        href="www.linkedin.com/in/mohammad-hasan-pourhasani"
-                        className="mx-1"
-                    >
-                        <SiLinkedin />
-                    </a>
+					<a
+						href='www.linkedin.com/in/mohammad-hasan-pourhasani'
+						className='mx-1 hover:text-sky-400'>
+						<SiLinkedin />
+					</a>
 
-                    <a
-                        href="https://github.com/MHPourhasani"
-                        className="mx-1"
-                    >
-                        <AiOutlineGithub />
-                    </a>
-                </nav>
-            </section>
+					<a href='https://github.com/MHPourhasani' className='mt-1 hover:text-sky-400'>
+						<AiOutlineGithub />
+					</a>
+					<p className='mx-0.5 px-1 py-1'>|</p>
+				</nav>
+			</section>
 
-            <Navigation className="z-10" />
-        </section>
-    );
+			<Navigation className='z-10' />
+		</section>
+	);
 };
 
 export default Header;
