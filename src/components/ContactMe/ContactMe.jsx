@@ -7,8 +7,6 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsWhatsapp } from 'react-icons/bs';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
-import { ContactMeComp } from '../../utils/ContactMeComp';
-
 const ContactMe = () => {
     const form = useRef();
     const [error, serError] = useState(null);
