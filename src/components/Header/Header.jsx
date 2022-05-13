@@ -41,7 +41,7 @@ const Header = () => {
 				<img src={photoMe} alt='my-photo' className='-translate-y-24 ' />
 			</section>
 
-			<section className='absolute hidden text-sky-500 sm:-bottom-16 sm:left-28 sm:block md:-bottom-24 md:left-36 lg:left-60'>
+			<section className='absolute hidden text-sky-500 sm:bottom-20 sm:left-28 sm:block md:bottom-14 md:left-36 lg:left-72 xl:left-96'>
 				<nav>
 					<a
 						href='www.linkedin.com/in/mohammad-hasan-pourhasani'
@@ -58,7 +58,7 @@ const Header = () => {
 					<a href='https://github.com/MHPourhasani' className='mt-1 hover:text-sky-400'>
 						<AiOutlineGithub />
 					</a>
-					<p className='mx-0.5 px-1 py-1'>|</p>
+					<p className='mx-0.5 cursor-default px-1 py-1'>|</p>
 				</nav>
 			</section>
 
