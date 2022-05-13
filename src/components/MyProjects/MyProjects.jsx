@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
-import { AiOutlineGithub } from 'react-icons/ai';
+import { AiOutlineGithub, AiFillHtml5 } from 'react-icons/ai';
 import { GiEarthAmerica } from 'react-icons/gi';
+import { DiCss3 } from 'react-icons/di';
+import { SiTailwindcss, SiJavascript, SiReact } from 'react-icons/si';
 
 import snapp_demo_screenShot from '../../assets/img/snapp_demo_screenShot.png';
 
@@ -15,27 +16,38 @@ const MyProjects = () => {
 			</section>
 
 			<ul className='flex flex-wrap items-start justify-center'>
-				<li className='my-2 flex w-5/6 flex-col items-start justify-center rounded-md border-2 border-transparent bg-darkBlueMd px-3 transition-all delay-75 hover:border-darkBlueMd hover:bg-opacity-40 sm:m-4 sm:w-64'>
+				<li className='my-2 flex w-5/6 flex-col items-start justify-center rounded-md border-2 border-transparent bg-darkBlueMd p-3 hover:border-darkBlueMd hover:bg-opacity-80 sm:m-4 sm:w-64'>
 					<div>
-						<img />
+						<img aria-hidden />
 					</div>
 					<div className='text-base font-semibold text-white'>Shopping Carts</div>
 
-					<ul className='my-2 flex items-center justify-start text-xs font-normal text-gray-500'>
-						<li className='mr-1 rounded-sm border-1 px-1 py-0.5'>Html</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Css</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Tailwindcss</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Js</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>React</li>
-					</ul>
-
-					<div className='pb-5 text-sm text-gray-500'>
+					<div className='py-1 text-sm text-gray-500'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, maxime
 						facere id quidem illo, cupiditate repellat perspiciatis nihil adipisci
 						inventore architecto excepturi voluptate. Dignissimos perspiciatis error
 						deserunt fugit, sapiente dolorum!
 					</div>
-					<div className='mb-5 flex items-center justify-center'>
+
+					<ul className='my-2 flex items-center justify-start text-xs font-normal text-gray-400'>
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<AiFillHtml5 className='h-5 w-5 text-orange-600' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<DiCss3 className='h-5 w-5 text-blue-500' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<SiTailwindcss className='h-5 w-5 text-sky-400' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<SiReact className='h-5 w-5 text-sky-400' />
+						</li>
+					</ul>
+
+					<div className='my-1 flex items-center justify-center'>
 						<a
 							target='_blank'
 							rel='noreferrer'
@@ -55,27 +67,38 @@ const MyProjects = () => {
 					</div>
 				</li>
 
-				<li className='my-2 flex w-5/6 flex-col items-start justify-center rounded-md border-2 border-transparent bg-darkBlueMd px-3 transition-all delay-75 hover:border-darkBlueMd hover:bg-opacity-40 sm:m-4 sm:w-64'>
+				<li className='my-2 flex w-5/6 flex-col items-start justify-center rounded-md border-2 border-transparent bg-darkBlueMd p-3 hover:border-darkBlueMd hover:bg-opacity-80 sm:m-4 sm:w-64'>
 					<div>
-						<img />
+						<img aria-hidden />
 					</div>
 					<div className='text-base font-semibold text-white'>Contact App</div>
 
-					<ul className='my-2 flex items-center justify-start text-xs font-normal text-gray-500'>
-						<li className='mr-1 rounded-sm border-1 px-1 py-0.5'>Html</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Css</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Tailwindcss</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Js</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>React</li>
-					</ul>
-
-					<div className='pb-5 text-sm text-gray-500'>
+					<div className='py-1 text-sm text-gray-500'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, maxime
 						facere id quidem illo, cupiditate repellat perspiciatis nihil adipisci
 						inventore architecto excepturi voluptate. Dignissimos perspiciatis error
 						deserunt fugit, sapiente dolorum!
 					</div>
-					<div className='mb-5 flex items-center justify-center'>
+
+					<ul className='my-2 flex items-center justify-start text-xs font-normal text-gray-400'>
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<AiFillHtml5 className='h-5 w-5 text-orange-600' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<DiCss3 className='h-5 w-5 text-blue-500' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<SiTailwindcss className='h-5 w-5 text-sky-400' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<SiReact className='h-5 w-5 text-sky-400' />
+						</li>
+					</ul>
+
+					<div className='my-1 flex items-center justify-center'>
 						<a
 							target='_blank'
 							rel='noreferrer'
@@ -95,27 +118,38 @@ const MyProjects = () => {
 					</div>
 				</li>
 
-				<li className='my-2 flex w-5/6 flex-col items-start justify-center rounded-md border-2 border-transparent bg-darkBlueMd px-3 transition-all delay-75 hover:border-darkBlueMd hover:bg-opacity-40 sm:m-4 sm:w-64'>
+				<li className='my-2 flex w-5/6 flex-col items-start justify-center rounded-md border-2 border-transparent bg-darkBlueMd p-3 hover:border-darkBlueMd hover:bg-opacity-80 sm:m-4 sm:w-64'>
 					<div>
 						<img />
 					</div>
 					<div className='text-base font-semibold text-white'>Expence Tracker</div>
 
-					<ul className='my-2 flex items-center justify-start text-xs font-normal text-gray-500'>
-						<li className='mr-1 rounded-sm border-1 px-1 py-0.5'>Html</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Css</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Tailwindcss</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Js</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>React</li>
-					</ul>
-
-					<div className='pb-5 text-sm text-gray-500'>
+					<div className='py-1 text-sm text-gray-500'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, maxime
 						facere id quidem illo, cupiditate repellat perspiciatis nihil adipisci
 						inventore architecto excepturi voluptate. Dignissimos perspiciatis error
 						deserunt fugit, sapiente dolorum!
 					</div>
-					<div className='mb-5 flex items-center justify-center'>
+
+					<ul className='my-2 flex items-center justify-start text-xs font-normal text-gray-400'>
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<AiFillHtml5 className='h-5 w-5 text-orange-600' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<DiCss3 className='h-5 w-5 text-blue-500' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<SiTailwindcss className='h-5 w-5 text-sky-400' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<SiReact className='h-5 w-5 text-sky-400' />
+						</li>
+					</ul>
+
+					<div className='my-1 flex items-center justify-center'>
 						<a
 							target='_blank'
 							rel='noreferrer'
@@ -135,16 +169,17 @@ const MyProjects = () => {
 					</div>
 				</li>
 
-				<li className='my-2 flex w-5/6 flex-col items-start justify-center rounded-md border-2 border-transparent bg-darkBlueMd p-3 transition-all delay-75 hover:border-darkBlueMd hover:bg-opacity-40 sm:m-4 sm:w-64'>
+				<li className='my-2 flex w-5/6 flex-col items-start justify-center rounded-md border-2 border-transparent bg-darkBlueMd p-3 hover:border-darkBlueMd hover:bg-opacity-80 sm:m-4 sm:w-64'>
 					<div>
 						<a
 							target='_blank'
 							rel='noreferrer'
 							href='https://snapp-demo-mhpourhasani.vercel.app/'>
 							<img
+								aria-hidden
 								src={snapp_demo_screenShot}
 								alt='snapp demo image'
-								className='rounded-md'
+								className='rounded-md hover:opacity-75'
 							/>
 						</a>
 					</div>
@@ -152,21 +187,28 @@ const MyProjects = () => {
 						<a href='https://snapp-demo-mhpourhasani.vercel.app/'>Snapp</a>
 					</div>
 
-					<ul className='my-2 flex items-center justify-start text-xs font-normal text-gray-500'>
-						<li className='mr-1 rounded-sm border-1 px-1 py-0.5'>Html</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Css</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Tailwindcss</li>
-						<li className='mx-1 rounded-sm border-1 px-1 py-0.5'>Js</li>
-					</ul>
-
-					<div className='pb-5 text-sm text-gray-500'>
+					<div className='py-1 text-sm text-gray-500'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, maxime
 						facere id quidem illo, cupiditate repellat perspiciatis nihil adipisci
 						inventore architecto excepturi voluptate. Dignissimos perspiciatis error
 						deserunt fugit, sapiente dolorum!
 					</div>
 
-					<div className='flex items-center justify-center'>
+					<ul className='my-2 flex items-center justify-start text-xs font-normal text-gray-400'>
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<AiFillHtml5 className='h-5 w-5 text-orange-600' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<DiCss3 className='h-5 w-5 text-blue-500' />
+						</li>
+
+						<li className='mr-1 rounded-md bg-slate-800 px-1.5 py-1'>
+							<SiTailwindcss className='h-5 w-5 text-sky-400' />
+						</li>
+					</ul>
+
+					<div className='my-1 flex items-center justify-center'>
 						<a
 							target='_blank'
 							rel='noreferrer'
