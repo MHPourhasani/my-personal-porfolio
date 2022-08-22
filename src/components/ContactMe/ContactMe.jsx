@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 
+// icons
 import { SiLinkedin } from 'react-icons/si';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsWhatsapp } from 'react-icons/bs';
@@ -11,6 +12,7 @@ const ContactMe = () => {
 	const form = useRef();
 	const [error, serError] = useState(null);
 
+	// send email function
 	const sendEmail = (e) => {
 		e.preventDefault();
 
@@ -19,7 +21,7 @@ const ContactMe = () => {
 			.then(
 				(result) => {
 					console.log(result.text);
-					toast.success('Email is sent', {
+					toast.success('Email sent', {
 						position: 'top-right',
 						autoClose: 3000,
 						hideProgressBar: false,
@@ -35,18 +37,18 @@ const ContactMe = () => {
 						serError(error.text);
 					}
 					console.log(error);
+					toast.error('The email was not sent', {
+						position: 'top-right',
+						autoClose: 3000,
+						hideProgressBar: false,
+						closeOnClick: true,
+						pauseOnHover: true,
+						draggable: true,
+						progress: undefined,
+						theme: 'dark',
+					});
 				}
 			);
-		toast.success('Email is sent', {
-			position: 'top-right',
-			autoClose: 3000,
-			hideProgressBar: false,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: true,
-			progress: undefined,
-			theme: 'dark',
-		});
 	};
 
 	return (
@@ -58,8 +60,10 @@ const ContactMe = () => {
 				<p className='my-1 text-lg font-semibold text-sky-400'>Contact Me</p>
 			</section>
 
-			<section className='flex w-full flex-col items-start justify-center sm:flex-row'>
+			<section className='flex w-full flex-col items-start justify-start sm:flex-row'>
+				{/* Reach me on social media section */}
 				<ul className='flex w-full flex-col items-center justify-center gap-y-3'>
+					{/* my email section */}
 					<li className='flex w-5/6 flex-col items-center justify-center rounded-md border-2 border-transparent bg-darkBlueMd py-5 text-white transition-all delay-75 hover:border-darkBlueMd hover:bg-opacity-40 sm:w-7/12 lg:w-1/2'>
 						<HiOutlineMail className='mb-1 h-6 w-6' />
 						<p className='my-1 font-semibold'>Email</p>
@@ -74,6 +78,7 @@ const ContactMe = () => {
 						</a>
 					</li>
 
+					{/* my linkedin section */}
 					<li className='flex w-5/6 flex-col items-center justify-center rounded-md border-2 border-transparent bg-darkBlueMd py-5 text-white transition-all delay-75 hover:border-darkBlueMd hover:bg-opacity-40 sm:w-7/12 lg:w-1/2'>
 						<SiLinkedin className='mb-1 h-6 w-6' />
 						<p className='my-1'>Linkedin</p>
@@ -89,6 +94,7 @@ const ContactMe = () => {
 						</a>
 					</li>
 
+					{/* my whatsApp section */}
 					<li className='flex w-5/6 flex-col items-center justify-center rounded-md border-2 border-transparent bg-darkBlueMd py-5 text-white transition-all delay-75 hover:border-darkBlueMd hover:bg-opacity-40 sm:w-7/12 lg:w-1/2'>
 						<BsWhatsapp className='mb-1 h-6 w-6' />
 						<p className='my-1'>WhatsApp</p>
@@ -104,20 +110,23 @@ const ContactMe = () => {
 					</li>
 				</ul>
 
+				{/* Contact me form including name and email and message inputs */}
 				<form
 					ref={form}
 					onSubmit={sendEmail}
 					className='flex w-full flex-col items-center justify-center text-white sm:items-start'>
+					{/* user name input */}
 					<div className='my-2 flex w-5/6 flex-col items-start justify-center sm:w-full'>
 						<input
 							type='text'
-							name='name'
+							name='user_name'
 							placeholder='Your Name'
 							required
 							className='w-full rounded-md border-2 border-gray-700 bg-transparent px-2 py-3 text-xs outline-none sm:w-10/12 lg:w-8/12'
 						/>
 					</div>
 
+					{/* user email input */}
 					<div className='my-2 flex w-5/6 flex-col items-start justify-center sm:w-full'>
 						<input
 							type='email'
@@ -128,24 +137,24 @@ const ContactMe = () => {
 						/>
 					</div>
 
-					<div className='my-2 flex w-5/6 flex-col items-start justify-center sm:w-full'>
+					{/* user message input */}
+					<div className='my-2 flex w-5/6 flex-col items-start justify-start sm:w-full'>
 						<input
 							type='text'
 							name='message'
-							placeholder='Your Message'
+							placeholder='Your Message...'
 							required
-							className='w-full rounded-md border-2 border-gray-700 bg-transparent px-2 py-3 text-xs outline-none sm:w-10/12 lg:w-8/12'
+							className='h-32 w-full rounded-md border-2 border-gray-700 bg-transparent px-2 py-3 text-xs outline-none sm:w-10/12 lg:w-8/12'
 						/>
 					</div>
 
+					{/* send message btn */}
 					<button type='submit' className='my-1 rounded-md bg-sky-400 p-3 text-xs'>
 						Send Message
 					</button>
 
 					{error && <p className='text-red-600'>{error}</p>}
 				</form>
-
-				{/* <ContactMeComp /> */}
 			</section>
 		</section>
 	);
