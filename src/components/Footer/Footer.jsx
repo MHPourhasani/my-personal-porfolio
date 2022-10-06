@@ -1,85 +1,70 @@
-import { AiOutlineHome } from 'react-icons/ai';
-import { FiUsers } from 'react-icons/fi';
-import { VscProject } from 'react-icons/vsc';
-import { TiContacts } from 'react-icons/ti';
-import { SiLinkedin } from 'react-icons/si';
+import { FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
-import { BsWhatsapp } from 'react-icons/bs';
-import { AiOutlineGithub } from 'react-icons/ai';
+import { BsWhatsapp, BsGithub } from 'react-icons/bs';
 
 const Footer = () => {
-    return (
-        <footer className="w-full h-52 bg-sky-500 sm:h-44">
-            <nav className="flex flex-wrap justify-center items-center text-sm py-5">
-                <a
-                    href="#"
-                    className="p-1 mx-2 hover:text-darkBlueMd hover:rounded-full hover:bg-gray-400 hover:bg-opacity-50 md:mx-3"
-                >
-                    {/* <AiOutlineHome className="w-5 h-5" /> */}
-                    Home
-                </a>
+	return (
+		<footer className='h-56 w-full bg-sky-500 sm:h-48 lg:h-56'>
+			<nav className='flex flex-wrap items-center justify-center gap-3 py-5 text-sm md:gap-4 lg:py-7 lg:text-base'>
+				<a
+					href='#introduction'
+					className='px-2 py-1 hover:rounded-full hover:bg-darkBlueLg hover:text-white'>
+					Home
+				</a>
 
-                <a className="p-1 mx-2 hover:text-darkBlueMd hover:rounded-full hover:bg-gray-400 hover:bg-opacity-50 md:mx-3">
-                    {/* <FiUsers className="w-5 h-5" /> */}
-                    About Me
-                </a>
+				<a
+					href='#about-me'
+					className='px-2 py-1 hover:rounded-full hover:bg-darkBlueLg hover:text-white'>
+					About Me
+				</a>
 
-                <a
-                    href="#my-projects"
-                    className="p-1 mx-2 hover:text-darkBlueMd hover:rounded-full hover:bg-gray-400 hover:bg-opacity-50 md:mx-3"
-                >
-                    {/* <VscProject className="w-5 h-5" /> */}
-                    My Projects
-                </a>
+				<a
+					href='#my-projects'
+					className='px-2 py-1 hover:rounded-full hover:bg-darkBlueLg hover:text-white'>
+					My Projects
+				</a>
 
-                <a
-                    href="#my-services"
-                    className="p-1 mx-2 hover:text-darkBlueMd hover:rounded-full hover:bg-gray-400 hover:bg-opacity-50 md:mx-3"
-                >
-                    {/* <TiContacts className="w-6 h-6" /> */}
-                    My Services
-                </a>
+				<a
+					href='#my-services'
+					className='px-2 py-1 hover:rounded-full hover:bg-darkBlueLg hover:text-white'>
+					My Services
+				</a>
 
-                <a
-                    href="#contact-me"
-                    className="p-1 mx-2 hover:text-darkBlueMd hover:rounded-full hover:bg-gray-400 hover:bg-opacity-50 md:mx-3"
-                >
-                    {/* <TiContacts className="w-6 h-6" /> */}
-                    Contact Me
-                </a>
-            </nav>
+				<a
+					href='#contact-me'
+					className='px-2 py-1 hover:rounded-full hover:bg-darkBlueLg hover:text-white'>
+					Contact Me
+				</a>
+			</nav>
 
-            <ul className="flex justify-center items-center">
-                <a
-                    href="www.linkedin.com/in/mohammad-hasan-pourhasani"
-                    className="mx-1"
-                >
-                    <HiOutlineMail />
-                </a>
+			<ul className='flex items-center justify-center gap-4 md:mt-3 md:gap-5 lg:gap-6'>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='www.linkedin.com/in/mohammad-hasan-pourhasani'>
+					<HiOutlineMail className='h-auto w-5 hover:text-darkBlueLg lg:w-6' />
+				</a>
 
-                <a
-                    href="www.linkedin.com/in/mohammad-hasan-pourhasani"
-                    className="mx-1"
-                >
-                    <SiLinkedin />
-                </a>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='www.linkedin.com/in/mohammad-hasan-pourhasani'>
+					<FaLinkedinIn className='h-auto w-5 hover:text-darkBlueLg lg:w-6' />
+				</a>
 
-                <a
-                    href="https://api.whatsapp.com/send?phone=+989109231061"
-                    className="mx-1"
-                >
-                    <BsWhatsapp />
-                </a>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://api.whatsapp.com/send?phone=+989109231061'>
+					<BsWhatsapp className='h-auto w-5 hover:text-darkBlueLg lg:w-6' />
+				</a>
 
-                <a
-                    href="https://github.com/MHPourhasani"
-                    className="mx-1"
-                >
-                    <AiOutlineGithub />
-                </a>
-            </ul>
-        </footer>
-    );
+				<a target='_blank' rel='noopener noreferrer' href='https://github.com/MHPourhasani'>
+					<BsGithub className='h-auto w-5 hover:text-darkBlueLg lg:w-6' />
+				</a>
+			</ul>
+		</footer>
+	);
 };
 
 export default Footer;
