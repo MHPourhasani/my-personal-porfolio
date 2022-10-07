@@ -1,62 +1,72 @@
-import photoMeSqu from '../../assets/img/photoMeSqu.png';
+import myPhoto_2 from '../../assets/img/my-photo-2.png';
 
 import { GiRibbonMedal } from 'react-icons/gi';
-import { HiUserGroup } from 'react-icons/hi';
+import { FaUniversity } from 'react-icons/fa';
 import { VscFolderLibrary } from 'react-icons/vsc';
 
 const AboutMe = () => {
+	const summaryAboutMe = [
+		{
+			title: 'Experience',
+			detail: 'junior developer',
+			icon: <GiRibbonMedal className='mb-2 h-10 w-10 text-sky-400' />,
+		},
+		{
+			title: 'Education',
+			detail: 'Computer Engineering Stu',
+			icon: <FaUniversity className='mb-2 h-10 w-10 text-sky-400' />,
+		},
+		{
+			title: 'Projects',
+			detail: '5 numbers',
+			icon: <VscFolderLibrary className='mb-2 h-10 w-10 text-sky-400' />,
+		},
+	];
+
 	return (
 		<section
 			id='about-me'
-			className='flex w-full flex-col flex-wrap items-center justify-around py-5 md:py-14'>
+			className='flex w-full flex-col flex-wrap items-center justify-around gap-2 py-5 md:pt-14 md:pb-0 lg:gap-10'>
 			<section className='flex flex-col items-center justify-center'>
-				<p className='text-xs text-gray-500'>Get To Know</p>
-				<p className='my-1 text-lg font-semibold text-sky-400'>About Me</p>
+				<p className='text-xs text-gray-500 sm:text-sm'>Get To Know</p>
+				<p className='my-1.5 text-lg font-semibold text-sky-400 md:text-xl'>About Me</p>
 			</section>
 
-			<section className='flex flex-col flex-wrap items-center justify-center md:my-5 md:flex-row'>
-				<div className='hidden rounded-lg bg-sky-400 hover:opacity-90 md:block md:h-64 md:w-64'>
+			<section className='flex w-10/12 flex-col items-center justify-center sm:w-11/12 md:my-5 md:flex-row md:items-start md:gap-5 lg:gap-12'>
+				{/* my photo */}
+				<div className='relative hidden rounded-lg bg-sky-400 hover:scale-105 md:h-64 md:w-64 lg:block lg:h-72 lg:w-72'>
 					<img
-						src={photoMeSqu}
+						src={myPhoto_2}
 						aria-hidden
-						alt='my-photo-Square'
-						className='-translate-y-32'
+						alt='mhp photo'
+						className='absolute bottom-0 w-10/12 translate-x-5'
 					/>
 				</div>
 
-				<div className='w-full md:w-1/2 lg:ml-16'>
-					<ul className='flex flex-col items-center justify-center sm:flex-row sm:flex-wrap'>
-						<li className='my-2 flex w-2/3 flex-col items-center justify-center rounded-md bg-darkBlueMd py-5 sm:mr-2 sm:w-1/4 md:px-5'>
-							<GiRibbonMedal className='mb-2 h-7 w-7 text-sky-400' />
-							<p className='my-1 font-semibold text-white'>Experience</p>
-							<p className='text-sm text-gray-400'>Junior</p>
-						</li>
-
-						<li className='my-2 flex w-2/3 flex-col items-center justify-center rounded-md bg-darkBlueMd py-5 sm:m-2 sm:w-1/4 md:px-5'>
-							<HiUserGroup className='mb-2 h-7 w-7 text-sky-400' />
-							<p className='my-1 font-semibold text-white'>Clients</p>
-							<p className='text-sm text-gray-400'>Experience</p>
-						</li>
-
-						<li className='my-2 flex w-2/3 flex-col items-center justify-center rounded-md bg-darkBlueMd py-5 sm:ml-2 sm:w-1/4 md:px-5'>
-							<VscFolderLibrary className='mb-2 h-7 w-7 text-sky-400' />
-
-							<p className='my-1 font-semibold text-white'>Projects</p>
-							<p className='text-sm text-gray-400'>Experience</p>
-						</li>
+				{/* about me */}
+				<div className='w-full md:w-10/12 lg:w-7/12 xl:w-1/2'>
+					<ul className='flex flex-col items-center justify-center gap-3 sm:flex-row'>
+						{summaryAboutMe.map((summary) => (
+							<li className='flex w-full flex-col items-center justify-center rounded-md bg-darkBlueMd py-5'>
+								{summary.icon}
+								<p className='my-1 font-semibold text-white'>{summary.title}</p>
+								<p className='text-sm text-gray-400 md:tracking-tighter'>
+									{summary.detail}
+								</p>
+							</li>
+						))}
 					</ul>
 
-					<section className='mx-auto my-2 w-2/3 text-sm sm:w-11/12 sm:px-10 md:my-0 md:w-10/12 md:px-2.5'>
-						<p className='mb-5 text-gray-400'>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis facere
-							fugit atque, ipsum architecto nam quo quas odit fuga reprehenderit
-							quaerat quisquam natus ipsam impedit repellat deleniti quae dolorem
-							culpa!
+					<section className='my-2 flex flex-col items-start gap-4 text-sm'>
+						<p className='text-justify text-gray-400'>
+							I'm Mohammad Hasan Pourhasani and I'm 21 years old. I started learning
+							Front-end web programming from the beginning of 2021. When learning,
+							several projects with different technologies that you can see below.
 						</p>
 						<a
-							href='#contact-me'
-							className='my-5 rounded-md bg-sky-400 px-3 py-2 font-medium'>
-							Let's Talk
+							href='#my-projects'
+							className='rounded-md bg-sky-500 px-5 py-2 font-medium hover:bg-sky-600'>
+							My Projects
 						</a>
 					</section>
 				</div>
