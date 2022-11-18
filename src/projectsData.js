@@ -28,9 +28,9 @@ export const projectsData = [
 	},
 	{
 		id: 3,
-		name: 'Expence Tracker',
-		demoLink: 'https://shopping-carts-mhpourhasani.vercel.app/',
-		githubLink: 'https://github.com/MHPourhasani/expence-tracker-react',
+		name: 'Expense Tracker',
+		demoLink: 'https://expense-tracker-react-mhpourhasani.vercel.app/',
+		githubLink: 'https://github.com/MHPourhasani/expense-tracker-react',
 		image: expense_tracker_screenShot,
 		description:
 			'o This app is a project which allows you to monitor and categorize your expenses. Implement by HTML, CSS and React.js . This project has been implemented in a responsive design. You can see live in this link and also see source code on Github.',
