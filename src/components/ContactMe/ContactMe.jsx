@@ -12,6 +12,27 @@ const ContactMe = () => {
 	const form = useRef();
 	const [error, serError] = useState(null);
 
+	const communicationMethods = [
+		{
+			social_icon: <HiOutlineMail className='h-auto w-8 lg:w-9' />,
+			title: 'Email',
+			detail: 'mhpourhasani.dev@gmail.com',
+			href: 'mailto:mhpourhasani.dev@gmail.com',
+		},
+		{
+			social_icon: <FaLinkedinIn className='h-auto w-7 lg:w-8' />,
+			title: 'Linkedin',
+			detail: 'in/mohammad-hasan-pourhasani',
+			href: 'https://www.linkedin.com/in/mohammad-hasan-pourhasani',
+		},
+		{
+			social_icon: <BsWhatsapp className='h-auto w-7 lg:w-8' />,
+			title: 'WhatsApp',
+			detail: '+98 9109231061',
+			href: 'https://api.whatsapp.com/send?phone=+989109231061',
+		},
+	];
+
 	// send email function
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -61,51 +82,21 @@ const ContactMe = () => {
 			<section className='flex w-full flex-col items-start justify-center sm:w-11/12 sm:flex-row sm:justify-between sm:gap-5 md:w-10/12 md:gap-10 lg:w-8/12 lg:gap-16'>
 				{/* Reach me on social media section */}
 				<ul className='flex w-full flex-col items-center justify-center gap-3 sm:w-9/12 lg:w-9/12'>
-					{/* my email section */}
-					<li className='flex w-5/6 flex-col items-center justify-center gap-2 rounded-md bg-darkBlueMd py-5 text-white ease-in-out hover:scale-105 sm:w-full'>
-						<HiOutlineMail className='h-auto w-8 lg:w-9' />
-						<p className='text-lg font-semibold lg:text-xl'>Email</p>
-						<p className='text-sm text-gray-300'>mhpourhasani.dev@gmail.com</p>
-						<a
-							target='_blank'
-							rel='noreferrer'
-							href='www.linkedin.com/in/mohammad-hasan-pourhasani'
-							className='mt-1 flex items-center justify-center text-sky-400 hover:animate-bounce hover:text-sky-500'>
-							<p className='mr-0.5 text-sm lg:text-sm'>Send a message</p>
-							<MdKeyboardArrowRight className='mt-1 text-sm' />
-						</a>
-					</li>
-
-					{/* my linkedin section */}
-					<li className='flex w-5/6 flex-col items-center justify-center gap-2 rounded-md bg-darkBlueMd py-5 text-white ease-in-out hover:scale-105 sm:w-full'>
-						<FaLinkedinIn className='h-auto w-7 lg:w-8' />
-						<p className='text-lg font-semibold lg:text-xl'>Linkedin</p>
-						<p className='text-sm text-gray-300'>in/mohammad-hasan-pourhasani</p>
-
-						<a
-							target='_blank'
-							rel='noreferrer'
-							href='www.linkedin.com/in/mohammad-hasan-pourhasani'
-							className='mt-1 flex items-center justify-center text-sky-400 hover:animate-bounce hover:text-sky-500'>
-							<p className='mr-0.5 text-sm lg:text-sm'>Send a message</p>
-							<MdKeyboardArrowRight className='mt-1 text-sm' />
-						</a>
-					</li>
-
-					{/* my whatsApp section */}
-					<li className='flex w-5/6 flex-col items-center justify-center gap-2 rounded-md bg-darkBlueMd py-5 text-white ease-in-out hover:scale-105 sm:w-full'>
-						<BsWhatsapp className='h-auto w-7 lg:w-8' />
-						<p className='text-lg font-semibold lg:text-xl'>WhatsApp</p>
-						<p className='text-sm text-gray-300'>+98 9109231061</p>
-						<a
-							target='_blank'
-							rel='noreferrer'
-							href='https://api.whatsapp.com/send?phone=+989109231061'
-							className='mt-1 flex items-center justify-center text-sky-400 hover:animate-bounce hover:text-sky-500'>
-							<p className='mr-0.5 text-sm lg:text-sm'>Send a message</p>
-							<MdKeyboardArrowRight className='mt-1 text-sm' />
-						</a>
-					</li>
+					{communicationMethods.map((method) => (
+						<li className='flex w-5/6 flex-col items-center justify-center gap-2 rounded-md bg-darkBlueMd py-5 text-white ease-in-out hover:scale-105 sm:w-full'>
+							{method.social_icon}
+							<p className='text-lg font-semibold lg:text-xl'>{method.title}</p>
+							<p className='text-sm text-gray-300'>{method.detail}</p>
+							<a
+								target='_blank'
+								rel='noreferrer'
+								href={method.href}
+								className='mt-1 flex items-center justify-center text-sky-400 hover:animate-bounce hover:text-sky-500'>
+								<p className='mr-0.5 text-sm lg:text-sm'>Send a message</p>
+								<MdKeyboardArrowRight className='mt-1 text-sm' />
+							</a>
+						</li>
+					))}
 				</ul>
 
 				{/* Contact me form including name and email and message inputs */}
@@ -147,6 +138,7 @@ const ContactMe = () => {
 						Send Message
 					</button>
 
+					{/* show the error to the user  */}
 					{error && <p className='text-red-600'>{error}</p>}
 				</form>
 			</section>
