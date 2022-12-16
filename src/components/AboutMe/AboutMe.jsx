@@ -57,11 +57,12 @@ const AboutMe = () => {
 						))}
 					</ul>
 
+					{/* about me description */}
 					<section className='my-2 flex flex-col items-start gap-4 text-sm'>
 						<p className='text-justify text-gray-400'>
 							I'm Mohammad Hasan Pourhasani and I'm 21 years old. I started learning
-							Front-end web programming from the beginning of 2021. When learning,
-							several projects with different technologies that you can see below.
+							Front-end from the beginning of 2021. During the learning period, I have
+							done various projects.
 						</p>
 						<a
 							href='#my-projects'
