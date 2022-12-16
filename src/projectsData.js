@@ -1,4 +1,5 @@
 // images
+import nobitex_clone_screenShot from './assets/img/nobitex_clone_screenShot.jpg';
 import shopping_cart_screenShot from './assets/img/shopping_cart_screenShot.jpg';
 import expense_tracker_screenShot from './assets/img/expense-tracker_screenShot.png';
 import snapp_clone_screenShot from './assets/img/snapp_clone_screenShot.png';
@@ -11,6 +12,20 @@ import { SiTailwindcss, SiJavascript, SiReact } from 'react-icons/si';
 import { FaSass } from 'react-icons/fa';
 
 export const projectsData = [
+	{
+		name: 'Nobitex Clone',
+		demoLink: 'https://nobitex-clone-react.vercel.app/',
+		githubLink: 'https://github.com/MHPourhasani/nobitex-clone-react',
+		image: nobitex_clone_screenShot,
+		description:
+			'o This app is a project which user can see cryptocurrencies, sign up, login and add cryptocurrencies to cart also manage cart. Implement by HTML, CSS, Tailwindcss and React.js. In this project I used Nobitex API for data. I working with Axios library for post and get data also I used react router dom. This project has been implemented in a responsive design.',
+		technologiesUsed: [
+			<AiFillHtml5 className='h-5 w-5 text-orange-600' />,
+			<DiCss3 className='h-5 w-5 text-blue-500' />,
+			<SiTailwindcss className='h-5 w-5 text-sky-400' />,
+			<SiReact className='h-5 w-5 text-sky-400' />,
+		],
+	},
 	{
 		name: 'Shopping Carts',
 		demoLink: 'https://shopping-carts-mhpourhasani.vercel.app/',
