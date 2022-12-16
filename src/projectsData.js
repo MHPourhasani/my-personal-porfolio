@@ -12,7 +12,6 @@ import { FaSass } from 'react-icons/fa';
 
 export const projectsData = [
 	{
-		id: 1,
 		name: 'Shopping Carts',
 		demoLink: 'https://shopping-carts-mhpourhasani.vercel.app/',
 		githubLink: 'https://github.com/MHPourhasani/shopping-carts-react',
@@ -27,7 +26,6 @@ export const projectsData = [
 		],
 	},
 	{
-		id: 3,
 		name: 'Expense Tracker',
 		demoLink: 'https://expense-tracker-react-mhpourhasani.vercel.app/',
 		githubLink: 'https://github.com/MHPourhasani/expense-tracker-react',
@@ -41,23 +39,21 @@ export const projectsData = [
 			<SiReact className='h-5 w-5 text-sky-400' />,
 		],
 	},
+	// {
+	// 	name: 'Todo List js',
+	// 	demoLink: 'https://todo-list-js-mhpourhasani.vercel.app/',
+	// 	githubLink: 'https://github.com/MHPourhasani/todo-list-js',
+	// 	image: null,
+	// 	description:
+	// 		'o	Implement by HTML, CSS and Javascript. This project has been implemented in a responsive design. You can see live in this link and also see source code on Github.',
+	// 	technologiesUsed: [
+	// 		<AiFillHtml5 className='h-5 w-5 text-orange-600' />,
+	// 		<DiCss3 className='h-5 w-5 text-blue-500' />,
+	// 		<SiTailwindcss className='h-5 w-5 text-sky-400' />,
+	// 		<SiJavascript className='h-5 w-5 text-yellow-400' />,
+	// 	],
+	// },
 	{
-		id: 6,
-		name: 'Todo List js',
-		demoLink: 'https://todo-list-js-mhpourhasani.vercel.app/',
-		githubLink: 'https://github.com/MHPourhasani/todo-list-js',
-		image: null,
-		description:
-			'o	Implement by HTML, CSS and Javascript. This project has been implemented in a responsive design. You can see live in this link and also see source code on Github.',
-		technologiesUsed: [
-			<AiFillHtml5 className='h-5 w-5 text-orange-600' />,
-			<DiCss3 className='h-5 w-5 text-blue-500' />,
-			<SiTailwindcss className='h-5 w-5 text-sky-400' />,
-			<SiJavascript className='h-5 w-5 text-yellow-400' />,
-		],
-	},
-	{
-		id: 7,
 		name: 'Basalam Clone',
 		demoLink: 'https://basalam-clone-mhpourhasani.vercel.app/',
 		githubLink: 'https://github.com/MHPourhasani/basalam-clone',
@@ -71,7 +67,6 @@ export const projectsData = [
 		],
 	},
 	{
-		id: 8,
 		name: 'Snapp Clone',
 		demoLink: 'http://snapp-clone-mhpourhasani.vercel.app/',
 		githubLink: 'https://github.com/MHPourhasani/snapp-clone',
