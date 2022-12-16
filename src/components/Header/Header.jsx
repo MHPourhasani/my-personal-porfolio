@@ -26,8 +26,9 @@ const Header = () => {
 			{/* download my resume and talk to me */}
 			<section className='mt-1 mb-7 flex items-center justify-center gap-x-2 text-center'>
 				<a
-					href='/../assets/files/mhpourhasani-resume.pdf'
-					download
+					target='_blank'
+					rel='noreferrer'
+					href='https://drive.google.com/file/d/1lgKIvwiBuIyU4Yb0Tshe1gibNzBDUo3x/view?usp=sharing'
 					className='flex h-10 w-32 items-center justify-center rounded-md border-2 border-gray-500 text-sm text-sky-400'>
 					Download Resume
 				</a>
