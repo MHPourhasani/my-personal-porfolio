@@ -36,6 +36,18 @@ const Navigation = () => {
 				<FiUsers className='h-6 w-6 xl:h-7 xl:w-7' />
 			</a>
 
+			{/* skills icon */}
+			<a
+				href='#my-skills'
+				onClick={() => setActiveNav('#my-skills')}
+				className={
+					activeNav === '#my-skills'
+						? 'mx-2 rounded-full bg-slate-800 p-1.5 text-white md:mx-3'
+						: 'mx-2 p-1.5 text-gray-400 hover:rounded-full hover:bg-slate-800 hover:text-white md:mx-3'
+				}>
+				<RiServiceLine className='h-6 w-6 xl:h-7 xl:w-7' />
+			</a>
+
 			{/* projects icon */}
 			<a
 				href='#my-projects'
@@ -46,18 +58,6 @@ const Navigation = () => {
 						: 'mx-2 p-1.5 text-gray-400 hover:rounded-full hover:bg-slate-800 hover:text-white md:mx-3'
 				}>
 				<VscProject className='h-6 w-6 xl:h-7 xl:w-7' />
-			</a>
-
-			{/* services icon */}
-			<a
-				href='#my-services'
-				onClick={() => setActiveNav('#my-services')}
-				className={
-					activeNav === '#my-services'
-						? 'mx-2 rounded-full bg-slate-800 p-1.5 text-white md:mx-3'
-						: 'mx-2 p-1.5 text-gray-400 hover:rounded-full hover:bg-slate-800 hover:text-white md:mx-3'
-				}>
-				<RiServiceLine className='h-6 w-6 xl:h-7 xl:w-7' />
 			</a>
 
 			{/* contact me icon */}
