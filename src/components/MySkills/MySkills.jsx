@@ -76,9 +76,11 @@ const MySkills = () => {
 			</div>
 
 			{/* show my skills */}
-			<section className='flex w-5/6 flex-col items-center justify-center gap-2'>
+			<section className='flex w-5/6 flex-wrap items-center justify-center my-3 gap-2 md:w-11/12 md:items-start'>
 				{mySkills.map((skill) => (
-					<Disclosure as='div' className='w-full rounded-md bg-darkBlueMd p-2'>
+					<Disclosure
+						as='div'
+						className='w-full rounded-md bg-darkBlueMd p-2 md:w-5/12 xl:w-3/12'>
 						{({ open }) => (
 							<>
 								<Disclosure.Button className='flex w-full items-center justify-between text-white'>
@@ -88,10 +90,10 @@ const MySkills = () => {
 									</span>
 
 									<MdOutlineKeyboardArrowDown
-										className={`${
+										className={`h-6 w-6 ${
 											open
 												? 'rotate-180 '
-												: 'h-6 w-6 transition-all delay-150 ease-in'
+												: 'transition-all delay-150 ease-in'
 										}`}
 									/>
 								</Disclosure.Button>
