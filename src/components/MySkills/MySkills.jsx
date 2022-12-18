@@ -10,54 +10,54 @@ import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 const MySkills = () => {
 	const mySkills = [
 		{
-			icon: <AiFillHtml5 className='h-6 w-6 text-orange-600' />,
+			icon: <AiFillHtml5 className='h-auto w-6 text-orange-600 md:w-8 xl:w-9' />,
 			title: 'HTML',
 			description:
 				'o	The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.',
 		},
 		{
-			icon: <DiCss3 className='h-6 w-6 text-blue-600' />,
+			icon: <DiCss3 className='h-auto w-6 text-blue-600 md:w-8 xl:w-9' />,
 			title: 'CSS',
 			description: 'o	CSS is the language we use to style a Web page.',
 		},
 		{
-			icon: <FaSass className='h-6 w-6 text-pink-500' />,
+			icon: <FaSass className='h-auto w-6 text-pink-500 md:w-8 xl:w-9' />,
 			title: 'Saas',
 			description:
 				'o	Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized and makes it easy to share design within and across projects.',
 		},
 		{
-			icon: <SiTailwindcss className='h-6 w-6 text-sky-400' />,
+			icon: <SiTailwindcss className='h-auto w-6 text-sky-400 md:w-8 xl:w-9' />,
 			title: 'Tailwindcss',
 			description:
 				'o	Tailwind CSS is an open source CSS framework. The main feature of this library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables. Instead, it creates a list of "utility" CSS classes that can be used to style each element by mixing and matching.',
 		},
 		{
-			icon: <SiJavascript className='h-6 w-6 text-yellow-400' />,
+			icon: <SiJavascript className='h-auto w-6 text-yellow-400 md:w-8 xl:w-9' />,
 			title: 'JavaScript',
 			description:
 				'o	JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.',
 		},
 		{
-			icon: <SiReact className='h-6 w-6 text-sky-400' />,
+			icon: <SiReact className='h-auto w-6 text-sky-400 md:w-8 xl:w-9' />,
 			title: 'React',
 			description:
 				'o	React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta (formerly Facebook) and a community of individual developers and companies. React can be used as a base in the development of single-page, mobile, or server-rendered applications with frameworks like Next.js. However, React is only concerned with state management and rendering that state to the DOM, so creating React applications usually requires the use of additional libraries for routing, as well as certain client-side functionality.',
 		},
 		{
-			icon: <SiRedux className='h-6 w-6 text-violet-700' />,
+			icon: <SiRedux className='h-auto w-6 text-violet-700 md:w-8 xl:w-9' />,
 			title: 'Redux',
 			description:
 				'o Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. Do some exercise project with redux for managing and centralizing application state.Redux is a small library with a simple, limited API designed to be a predictable container for application state. It operates in a similar fashion to a reducing function, a functional programming concept. ',
 		},
 		{
-			icon: <SiRedux className='h-6 w-6 text-violet-700' />,
+			icon: <SiRedux className='h-auto w-6 text-violet-700 md:w-8 xl:w-9' />,
 			title: 'Redux-toolkit',
 			description:
 				'The Redux Toolkit package is intended to be the standard way to write Redux logic. It was originally created to help address three common concerns about Redux: 1. Configuring a Redux store is too complicated 2. I have to add a lot of packages to get Redux to do anything useful 3. Redux requires too much boilerplate code',
 		},
 		{
-			icon: <SiGithub className='h-6 w-6' />,
+			icon: <SiGithub className='h-auto w-6 md:w-8 xl:w-9' />,
 			title: 'Git & Github',
 			description:
 				'o	Utilizing the git flow procedure including (branching, pull, push, standard commit) to better manage the project and code review. ',
@@ -76,17 +76,17 @@ const MySkills = () => {
 			</div>
 
 			{/* show my skills */}
-			<section className='flex w-5/6 flex-wrap items-center justify-center my-3 gap-2 md:w-11/12 md:items-start'>
+			<section className='my-3 flex w-5/6 flex-wrap items-center justify-center gap-2 md:w-11/12 md:items-start xl:gap-3'>
 				{mySkills.map((skill) => (
 					<Disclosure
 						as='div'
-						className='w-full rounded-md bg-darkBlueMd p-2 md:w-5/12 xl:w-3/12'>
+						className='w-full rounded-md bg-darkBlueMd p-2 md:w-5/12 md:p-2.5 xl:w-3/12 xl:p-3'>
 						{({ open }) => (
 							<>
 								<Disclosure.Button className='flex w-full items-center justify-between text-white'>
 									<span className='flex items-center gap-3'>
 										{skill.icon}
-										<span className='font-medium'>{skill.title}</span>
+										<span className='font-medium xl:text-lg'>{skill.title}</span>
 									</span>
 
 									<MdOutlineKeyboardArrowDown
