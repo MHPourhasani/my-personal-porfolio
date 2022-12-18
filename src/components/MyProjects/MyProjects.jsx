@@ -29,7 +29,7 @@ const MyProjects = () => {
 				mousewheel={true}
 				keyboard={true}
 				pagination={{
-					clickable: true,
+					dynamicBullets: true,
 				}}
 				breakpoints={{
 					320: {
@@ -61,9 +61,9 @@ const MyProjects = () => {
 					},
 				}}
 				modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-				className='items my-3 flex w-11/12 justify-center xl:w-11/12'>
+				className='my-3 flex w-11/12 justify-center xl:w-11/12'>
 				{projectsData.map((project) => (
-					<SwiperSlide key={project.id}>
+					<SwiperSlide>
 						<li className='flex w-full flex-col items-start justify-center gap-3 rounded-md bg-darkBlueMd p-3 sm:w-10/12 md:w-11/12 lg:w-9/12'>
 							{/* project image */}
 							<a target='_blank' rel='noreferrer' href={project.demoLink}>
@@ -71,6 +71,8 @@ const MyProjects = () => {
 									src={project.image}
 									alt={`${project.name} project`}
 									aria-hidden
+									width='100%'
+									height='100%'
 									className='rounded-md hover:scale-105'
 								/>
 							</a>
