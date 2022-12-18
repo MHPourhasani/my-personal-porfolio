@@ -65,9 +65,9 @@ const AboutMe = () => {
 							done various projects.
 						</p>
 						<a
-							href='#my-projects'
+							href='#my-skills'
 							className='rounded-md bg-sky-500 px-5 py-2 font-medium hover:bg-sky-600'>
-							My Projects
+							My Skills
 						</a>
 					</section>
 				</div>
