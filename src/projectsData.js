@@ -8,10 +8,26 @@ import basalam_clone_screenShot from './assets/img/basalam_clone_screenShot.jpg'
 // icons
 import { AiFillHtml5 } from 'react-icons/ai';
 import { DiCss3 } from 'react-icons/di';
-import { SiTailwindcss, SiJavascript, SiReact } from 'react-icons/si';
+import { SiTailwindcss, SiRedux, SiReact } from 'react-icons/si';
 import { FaSass } from 'react-icons/fa';
+import { TbBrandNextjs } from 'react-icons/tb';
 
 export const projectsData = [
+	{
+		name: 'Shopping Cart nextjs',
+		demoLink: 'https://shopping-carts-next.vercel.app/',
+		githubLink: 'https://github.com/MHPourhasani/shopping-carts-next',
+		image: "",
+		description:
+			'o This app is a project which user can see some products, sign up, login and add products to cart also manage cart. Implement by HTML, CSS, Tailwindcss, redux-toolkit and nextjs 13. In this project I used firebase for data. I working with firebase api for post and get data. I used redux-toolkit to management states. This project has been implemented in a responsive design.',
+		technologiesUsed: [
+			<AiFillHtml5 className='h-5 w-5 text-orange-600' />,
+			<DiCss3 className='h-5 w-5 text-blue-500' />,
+			<SiTailwindcss className='h-5 w-5 text-sky-400' />,
+			<SiRedux className='h-5 w-5 text-purple-500' />,
+			<TbBrandNextjs className='h-5 w-5 text-white' />,
+		],
+	},
 	{
 		name: 'Nobitex Clone',
 		demoLink: 'https://nobitex-clone-react.vercel.app/',
